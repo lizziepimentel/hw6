@@ -1,0 +1,40 @@
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <title>JSON Part 2</title>
+</head>
+	
+<body>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	
+    <script>
+		
+		$(document).ready(function () {
+            $.getJSON("https://lizziepimentel.github.io/hw6/json1.html", function (data) {
+				JSONdisplay(data);
+            });
+        });
+		
+		
+        function JSONdisplay(data) {
+            var showProducts = document.getElementById("products");
+            var html = "";
+
+            for (var i = 0; i < data.products.length; i++) {
+                var product = data.products[i];
+
+                html += "<div class='product-card'>";
+                html += "<div class='product-name'>" + product.name + "</div>";
+                html += "<div class='product-description'>" + product.description + "</div>";
+                html += "<div class='product-price'>$" + product.price + "</div>";
+                html += "<div class='product-categories'>" + product.categories.join(', ') + "</div>";
+                html += "</div>";
+            }
+
+            showProducts.innerHTML = html;
+        }
+		
+    </script>
+</body>
+</html>

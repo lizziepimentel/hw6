@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+ <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<title>JSON Part 1</title>
+</head>
+
+<body>
+	<script>
+		var productList = {
+			"products": [
+				{
+					"name": "Rebel Riffs Leather Jacket",
+					"description": "Unleash your inner rockstar with this genuine leather jacket featuring edgy metal studs, a rebellious silhouette, and a distressed finish. Perfect for stage presence and off-duty cool.",
+					"size": "Medium",
+					"price": "$299.99",
+					"categories": ["Apparel", "Outwear"]
+					
+				
+				},
+			
+				{
+					"name": "Sonic Shredder Guitar Strap",
+					"description": "Crafted for comfort and style, the Sonic Shredder strap boasts a bold design with intricate guitar motifs. Adjustable length for versatile playing styles, ensuring you look as good as you sound.",
+					"size": "One Size",
+					"price": "$34.99",
+					"categories": ["Accessories", "Instrument"]
+					
+				
+				},
+				
+				{
+					"name": "Roadie Ready Drumstick Bag",
+					"description": "Keep your drumsticks organized and within reach with the Roadie Ready bag. Designed for durability, it includes pockets for accessories and a sleek, road-ready aesthetic.",
+					"size": "Standard",
+					"price": "$19.99",
+					"categories": ["Accesories", "Organization"]
+					
+				
+				},
+				
+				{
+					"name": "Amplify Attitude Graphic Tee",
+					"description": "Let your attitude speak volumes with the Amplify Attitude tee. Featuring bold graphics and a comfortable fit, it's the perfect way to express your rockstar vibe.",
+					"size": "XLarge",
+					"price": "$24.99",
+					"categories": ["Apparel", "Tops"]
+					
+				
+				},
+				
+				{
+					"name": "Thunderstrike Bass Guitar Case",
+					"description": "Protect your bass in style with the Thunderstrike case. Hardshell construction, plush interior, and a lightning-inspired design make it a must-have for any bassist on the move.",
+					"size": "Standard",
+					"price": "$129.99",
+					"categories": ["Accesories", "Instrument"]
+					
+				
+				},
+				
+				{
+					"name": "Stage Swagger Boots",
+					"description": "Step onto the stage with confidence in these Stage Swagger boots. Featuring a bold design, sturdy construction, and a non-slip sole, these boots are made for rocking.",
+					"size": "10 (US Men's)",
+					"price": "$79.99",
+					"categories": ["Footwear", "Boots"]
+					
+				
+				},
+				
+				{
+					"name": "Lyrical Lightning Patch Set",
+					"description": "Customize your gear with the Lyrical Lightning patch set. Featuring embroidered designs inspired by iconic lyrics, these patches add a touch of personality to your instruments and clothing.",
+					"size": "Various",
+					"price": "$14.99",
+					"categories": ["Accessories"]
+					
+				
+				},
+				
+				{
+					"name": "Groove Guardian Bass Strap",
+					"description": "The Groove Guardian strap combines comfort and style for bassists. With extra padding and a unique groove pattern, it ensures you can play all night without missing a beat.",
+					"size": "Adjustable",
+					"price": "$39.99",
+					"categories": ["Accesories", "Instrument"]
+					
+				
+				},
+				
+				{
+					"name": "TourTech Cable Organizer",
+					"description": "Tame the cable chaos with the TourTech organizer. Compact and versatile, it keeps your cables in check, so you can focus on your performance.",
+					"size": "Compact",
+					"price": "$12.99",
+					"categories": ["Accesories", "Organization"]
+					
+				
+				},
+				
+				{
+					"name": "Pyro Percussion Drum Throne",
+					"description": "Elevate your drumming experience with the Pyro Percussion throne. Adjustable height, comfortable padding, and a fiery design make it a standout on any stage.",
+					"size": "Adjustable",
+					"price": "$79.99",
+					"categories": ["Accesories", "Instrument"]
+					
+				
+				},
+				
+				{
+					"name": "Retro Rebel Sunglasses",
+					"description": "Shield your eyes with style in the Retro Rebel sunglasses. Featuring a classic aviator design with a rebellious twist, they're the perfect accessory for any rockstar under the spotlight.",
+					"size": "One size",
+					"price": "$29.99",
+					"categories": ["Accesories", "Eyewear"]
+					
+				
+				},
+				
+				{
+					"name": "Encore Energy Drink Holder",
+					"description": "Stay energized on stage with the Encore drink holder. Easily attaches to your mic stand, ensuring your favorite energy drink is always within reach for those long, electrifying performances.",
+					"size": "Standard",
+					"price": "$9.99",
+					"categories": "Accesories"
+					
+				
+				},
+			]
+		};
+		
+		var list = JSON.stringify(productList);
+		document.write(list);
+		
+	</script>
+</body>
+</html>

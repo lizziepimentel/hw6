@@ -1,25 +1,31 @@
 <!doctype html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>JSON Part 2</title>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
 </head>
-<body>
 
+<body>
     <div id="products"></div>
 
     <script>
         $(document).ready(function () {
-            $.get("products.json", function (data) {
+            $.get("https://lizziepimentel.github.io/hw6/products.json", function(data) {
                 JSONdisplay(data);
             });
         });
 
         function JSONdisplay(data) {
+            var products = JSON.stringify(data);
+            document.getElementById("products").innerHTML = products;
+
             var showProducts = document.getElementById("products");
             var html = "";
 
-            for (var i = 0; i < data.products.length; i++) {
+            for (var i = 0; i < data.length; i++) {
                 var product = data.products[i];
 
                 html += "<div class='product-card'>";
@@ -34,6 +40,7 @@
             showProducts.innerHTML = html;
         }
     </script>
-
 </body>
+</html>
+
 </html>

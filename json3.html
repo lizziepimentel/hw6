@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <title>JSON Pt 3</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div>
+        <h2>Products Category Filter</h2>
+        <form id="filterForm">
+            <label for="category">Select a Category:</label>
+            <select id="category"></select>
+            <button type="button" id="filterButton">Filter</button>
+        </form>
+    </div>
+    <div id="filteredItems"></div>
+
+    <script>
+        $(document).ready(function () {
+            var productList;
+
+            $.get("products.json", function (data) {
+                productList = data;
+                var dropdown = $("#category");
+                $.each(getCats(), function (index, category) {
+                    dropdown.append($("<option>").text(category));
+                });
+            });
+
+            $("#filterButton").click(function () {
+                var selectedCategory = $("#category").val();
+                var filteredProducts = productList.products.filter(function (product) {
+                    return product.categories.includes(selectedCategory);
+                });
+                display(filteredProducts);
+            });
+
+            function getCats() {
+                var categories = [];
+                $.each(productList.products, function (index, product) {
+                    categories = categories.concat(product.categories);
+                });
+                return Array.from(new Set(categories));
+            }
+
+            function display(products) {
+                var filtered = $("#filteredItems");
+                filtered.empty();
+
+                if (products.length === 0) {
+                    filtered.text("No products match.");
+                } else {
+                    $.each(products, function (index, product) {
+                        filtered.append("<p>" + product.name + "</p>");
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html>

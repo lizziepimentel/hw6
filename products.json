@@ -1,4 +1,5 @@
-[
+{
+	“products”: [
     {
         "name": "Rebel Riffs Leather Jacket",
         "description": "Unleash your inner rockstar with this genuine leather jacket featuring edgy metal studs, a rebellious silhouette, and a distressed finish. Perfect for stage presence and off-duty cool.",
@@ -116,3 +117,4 @@
         "categories": "Accesories"
     }
 ]
+}

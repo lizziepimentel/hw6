@@ -1,14 +1,4 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<title>JSON Part 1</title>
-</head>
-
-<body>
-	<script>
-		var productList = {
+var productList = {
 			"products": [
 				{
 					"name": "Rebel Riffs Leather Jacket",
@@ -131,10 +121,3 @@
 				},
 			]
 		};
-		
-		var list = JSON.stringify(productList);
-		document.write(list);
-		
-	</script>
-</body>
-</html>
